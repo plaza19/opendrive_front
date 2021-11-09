@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, browserLocalPersistence, setPersistence } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import Swal from "sweetalert2";
 
 export default {
@@ -55,7 +55,7 @@ export default {
   methods: {
     login() {
       const auth = getAuth();
-      setPersistence(auth, browserLocalPersistence)
+      auth.setPersistence("local");
       signInWithEmailAndPassword(auth, this.email, this.password)
         .then((res) => {
           console.log(res);

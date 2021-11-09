@@ -5,6 +5,7 @@ import VueRouter from 'vue-router';
 import Register from "./components/Register/Register.vue";
 import Login from "./components/Login/Login.vue";
 import Dashboard from "./components/Dashboard/Dashboard.vue";
+import UploadFile from "./components/UploadFile/UploadFile.vue";
 
 
 Vue.config.productionTip = false;
@@ -27,14 +28,13 @@ const firebaseConfig = {
 
 };
 
-const app = initializeApp(firebaseConfig);
-console.log(app);
-
+initializeApp(firebaseConfig);
 
 const routes = [
   {path:"/register", component: Register},
   {path:"/login", component: Login},
-  {path:"/dashboard", component: Dashboard}
+  {path:"/dashboard", component: Dashboard},
+  {path:"/upload", component:UploadFile}
 ];
 
 const router = new VueRouter({
