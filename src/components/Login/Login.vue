@@ -2,7 +2,7 @@
   <body class="text-center">
     <main class="form-signin">
       <form @submit.prevent="login()">
-        <img class="mb-4" src="" alt="" width="72" height="57" />
+        <img class="mb-4" src="../../assets/images/logo_transparent.png" alt="" width="100" height="100" />
         <h1 class="h3 mb-3 fw-normal">Login</h1>
 
         <div class="form-floating">
@@ -27,14 +27,14 @@
         </div>
 
         <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me" /> Remember me
-          </label>
+          <router-link to="/forgot">
+            Forgot Password?
+          </router-link>
         </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">
           Login
         </button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+        <p class="mt-5 mb-3 text-muted">&copy; Diego Plaza 2021</p>
       </form>
     </main>
   </body>
@@ -73,13 +73,8 @@ export default {
 
       onAuthStateChanged(auth, (user) => {
         if (user) {
-          // User is signed in, see docs for a list of available properties
-          // https://firebase.google.com/docs/reference/js/firebase.User
           const uid = user.uid;
           console.log(uid);
-        } else {
-          // User is signed out
-          // ...
         }
       });
     },

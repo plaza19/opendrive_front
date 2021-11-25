@@ -35,7 +35,16 @@ var formats = {
         {
             "formato": "7zip",
             "icono": "https://cdn-icons-png.flaticon.com/512/2521/2521778.png"
-        }
+        },
+        {
+            "formato": "exe",
+            "icono": "https://cdn-icons-png.flaticon.com/512/29/29482.png"
+        },
+        {
+            "formato": "msi",
+            "icono": "https://cdn-icons-png.flaticon.com/512/29/29093.png"
+        },
+
         
     ]
 }
