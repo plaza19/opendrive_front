@@ -54,21 +54,6 @@ export default {
       console.log(auth.currentUser);
       this.userData = auth.currentUser;
     },
-    getFiles() {
-      //   var storage = getStorage();
-      //   console.log("hola" + JSON.stringify(storage));
-      //   const reference = ref(storage, "/");
-      //   console.log(reference);
-      //   listAll(reference).then((res) => {
-      //     res.prefixes.forEach(function (folderRef) {
-      //       console.log("folderRef" + folderRef);
-      //     });
-      //     res.items.forEach(function (itemRef) {
-      //       // All the items under listRef.
-      //       console.log("ItemRef" + itemRef);
-      //     });
-      //   });
-    },
     async listAllm() {
       try {
         const storage = getStorage();
@@ -128,7 +113,6 @@ export default {
   },
   mounted() {
     this.getUserData();
-    this.getFiles();
     this.listAllm();
     if (getAuth().currentUser == null) {
       this.$router.push("/home");
